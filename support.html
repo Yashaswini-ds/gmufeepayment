@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - GMU Fee Payment System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>GMU Fee Payment</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Dashboard</a></li>
+                    <li><a href="payment.html">Make Payment</a></li>
+                    <li><a href="history.html">Payment History</a></li>
+                    <li><a href="invoices.html">Invoices</a></li>
+                    <li><a href="support.html" class="active">Support</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Customer Support</h1>
+                <p>We're here to help with your queries</p>
+            </div>
+        </section>
+
+        <!-- Support Section -->
+        <section class="support">
+            <div class="container">
+                <div class="support-layout">
+                    <!-- FAQ Section -->
+                    <div class="faq-section">
+                        <h2>Frequently Asked Questions</h2>
+                        
+                        <div class="faq-container">
+                            <div class="faq-item">
+                                <div class="faq-question">How do I make a payment online?</div>
+                                <div class="faq-answer">
+                                    <p>To make a payment online, follow these simple steps:</p>
+                                    <ol>
+                                        <li>Login to your student account</li>
+                                        <li>Navigate to the "Make Payment" page</li>
+                                        <li>Select the fees you want to pay</li>
+                                        <li>Choose your preferred payment method</li>
+                                        <li>Complete the transaction</li>
+                                        <li>Download your receipt</li>
+                                    </ol>
+                                </div>
+                            </div>
+                            
+                            <div class="faq-item">
+                                <div class="faq-question">What payment methods are accepted?</div>
+                                <div class="faq-answer">
+                                    <p>We accept the following payment methods:</p>
+                                    <ul>
+                                        <li>Net Banking</li>
+                                        <li>Credit/Debit Cards</li>
+                                        <li>UPI</li>
+                                        <li>Mobile Wallets</li>
+                                        <li>Cash payment at finance office</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="faq-item">
+                                <div class="faq-question">What should I do if my payment fails?</div>
+                                <div class="faq-answer">
+                                    <p>If your payment fails, please check the following:</p>
+                                    <ul>
+                                        <li>Ensure you have sufficient funds in your account</li>
+                                        <li>Verify that your payment details are correct</li>
+                                        <li>Check your internet connection</li>
+                                    </ul>
+                                    <p>If the problem persists, please wait for 24 hours to see if the payment is processed. If the amount is debited but not reflected in your account, contact our support team with your transaction details.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="faq-item">
+                                <div class="faq-question">How do I download my fee receipt?</div>
+                                <div class="faq-answer">
+                                    <p>You can download your fee receipt in two ways:</p>
+                                    <ol>
+                                        <li>Immediately after a successful payment, click the "Download Receipt" button on the payment confirmation page.</li>
+                                        <li>Visit the "Payment History" page, locate the transaction, and click the "Receipt" button next to it.</li>
+                                    </ol>
+                                </div>
+                            </div>
+                            
+                            <div class="faq-item">
+                                <div class="faq-question">What are the late payment charges?</div>
+                                <div class="faq-answer">
+                                    <p>Late payment charges are calculated as follows:</p>
+                                    <ul>
+                                        <li>1-15 days late: 5% of the outstanding amount</li>
+                                        <li>16-30 days late: 10% of the outstanding amount</li>
+                                        <li>More than 30 days late: 15% of the outstanding amount</li>
+                                    </ul>
+                                    <p>We recommend making payments before the due date to avoid these charges.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="faq-item">
+                                <div class="faq-question">Can I get a refund for excess payment?</div>
+                                <div class="faq-answer">
+                                    <p>Yes, refunds are possible for excess payments. Please follow these steps:</p>
+                                    <ol>
+                                        <li>Submit a refund request through the contact form</li>
+                                        <li>Provide your transaction details and reason for refund</li>
+                                        <li>Our finance team will verify the excess payment</li>
+                                        <li>If approved, the refund will be processed within 7-10 working days</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact Form -->
+                    <div class="contact-section">
+                        <h2>Contact Us</h2>
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="studentId">Student ID</label>
+                                <input type="text" id="studentId" class="form-control" placeholder="Enter your student ID" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="queryType">Query Type</label>
+                                <select id="queryType" class="form-control" required>
+                                    <option value="">-- Select Query Type --</option>
+                                    <option value="payment">Payment Issues</option>
+                                    <option value="refund">Refund Request</option>
+                                    <option value="technical">Technical Support</option>
+                                    <option value="fee">Fee Structure</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Your Message</label>
+                                <textarea id="message" class="form-control" rows="5" placeholder="Describe your issue in detail" required></textarea>
+                            </div>
+                            
+                            <div class="form-group attachment">
+                                <label for="attachment">Attachment (Optional)</label>
+                                <input type="file" id="attachment" class="form-control">
+                                <small>Max file size: 5MB (PDF, JPG, PNG)</small>
+                            </div>
+                            
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary btn-block">Submit Query</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <h2>Other Ways to Reach Us</h2>
+                    <div class="contact-cards">
+                        <div class="contact-card">
+                            <div class="contact-icon phone"></div>
+                            <h3>Phone Support</h3>
+                            <p>+91 9876543210</p>
+                            <p class="details">Monday to Friday, 9:00 AM to 5:00 PM</p>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <div class="contact-icon email"></div>
+                            <h3>Email Support</h3>
+                            <p>fees@gmu.ac.in</p>
+                            <p class="details">We respond within 24 hours</p>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <div class="contact-icon location"></div>
+                            <h3>Visit Us</h3>
+                            <p>Finance Department, Admin Block</p>
+                            <p class="details">Monday to Friday, 10:00 AM to 4:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>GMU Fee Payment System</h3>
+                    <p>Manage all your fee payments easily through our online portal. Track payments, download receipts, and stay updated on due dates.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Dashboard</a></li>
+                        <li><a href="payment.html">Make Payment</a></li>
+                        <li><a href="history.html">Payment History</a></li>
+                        <li><a href="invoices.html">Invoices</a></li>
+                        <li><a href="support.html">Support</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li>Finance Department</li>
+                        <li>Phone: +91 9876543210</li>
+                        <li>Email: fees@gmu.ac.in</li>
+                        <li>Working Hours: Mon-Fri, 9am-5pm</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 GMU Fee Payment System. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="support.js"></script>
+</body>
+</html>

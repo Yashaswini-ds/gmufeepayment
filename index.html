@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GMU Fee Payment System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>GMU Fee Payment</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Dashboard</a></li>
+                    <li><a href="payment.html">Make Payment</a></li>
+                    <li><a href="history.html">Payment History</a></li>
+                    <li><a href="invoices.html">Invoices</a></li>
+                    <li><a href="support.html">Support</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Welcome to GMU Fee Payment System</h1>
+                    <p>Manage all your university fee payments in one place</p>
+                    <a href="payment.html" class="btn btn-primary">Make a Payment</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dashboard Summary -->
+        <section class="summary">
+            <div class="container">
+                <h2>Your Fee Summary</h2>
+                <div class="cards-container">
+                    <div class="card">
+                        <div class="card-icon pending"></div>
+                        <div class="card-content">
+                            <h3>Pending Fees</h3>
+                            <p class="amount">₹45,000</p>
+                            <p class="details">Due on 30 April, 2025</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon paid"></div>
+                        <div class="card-content">
+                            <h3>Paid Fees</h3>
+                            <p class="amount">₹1,25,000</p>
+                            <p class="details">Last payment: 15 Feb, 2025</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon upcoming"></div>
+                        <div class="card-content">
+                            <h3>Upcoming Fees</h3>
+                            <p class="amount">₹50,000</p>
+                            <p class="details">Due on 30 July, 2025</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recent Transactions -->
+        <section class="recent-transactions">
+            <div class="container">
+                <h2>Recent Transactions</h2>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Transaction ID</th>
+                                <th>Date</th>
+                                <th>Description</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>TXN123456</td>
+                                <td>15 Feb, 2025</td>
+                                <td>Tuition Fee - Spring Semester</td>
+                                <td>₹75,000</td>
+                                <td><span class="status paid">Paid</span></td>
+                                <td><button class="btn-sm download-receipt" data-id="TXN123456">Receipt</button></td>
+                            </tr>
+                            <tr>
+                                <td>TXN123455</td>
+                                <td>10 Jan, 2025</td>
+                                <td>Hostel Fee - Spring Semester</td>
+                                <td>₹50,000</td>
+                                <td><span class="status paid">Paid</span></td>
+                                <td><button class="btn-sm download-receipt" data-id="TXN123455">Receipt</button></td>
+                            </tr>
+                            <tr>
+                                <td>TXN123454</td>
+                                <td>05 Dec, 2024</td>
+                                <td>Library Fine</td>
+                                <td>₹500</td>
+                                <td><span class="status pending">Pending</span></td>
+                                <td><button class="btn-sm pay-now">Pay Now</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Announcements -->
+        <section class="announcements">
+            <div class="container">
+                <h2>Announcements</h2>
+                <div class="announcement-list">
+                    <div class="announcement">
+                        <div class="date">15 Mar</div>
+                        <div class="content">
+                            <h3>Fee Submission Deadline Extended</h3>
+                            <p>The deadline for submitting the Spring semester fees has been extended to April 30, 2025.</p>
+                        </div>
+                    </div>
+                    <div class="announcement">
+                        <div class="date">10 Mar</div>
+                        <div class="content">
+                            <h3>New Scholarship Opportunities</h3>
+                            <p>Check out the new scholarship opportunities for academic excellence. Apply before May 15, 2025.</p>
+                        </div>
+                    </div>
+                    <div class="announcement">
+                        <div class="date">01 Mar</div>
+                        <div class="content">
+                            <h3>Online Payment System Upgrade</h3>
+                            <p>We have upgraded our payment system for better security and user experience.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>GMU Fee Payment System</h3>
+                    <p>Manage all your fee payments easily through our online portal. Track payments, download receipts, and stay updated on due dates.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Dashboard</a></li>
+                        <li><a href="payment.html">Make Payment</a></li>
+                        <li><a href="history.html">Payment History</a></li>
+                        <li><a href="invoices.html">Invoices</a></li>
+                        <li><a href="support.html">Support</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li>Finance Department</li>
+                        <li>Phone: +91 9876543210</li>
+                        <li>Email: fees@gmu.ac.in</li>
+                        <li>Working Hours: Mon-Fri, 9am-5pm</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 GMU Fee Payment System. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

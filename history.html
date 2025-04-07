@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment History - GMU Fee Payment System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>GMU Fee Payment</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Dashboard</a></li>
+                    <li><a href="payment.html">Make Payment</a></li>
+                    <li><a href="history.html" class="active">Payment History</a></li>
+                    <li><a href="invoices.html">Invoices</a></li>
+                    <li><a href="support.html">Support</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Payment History</h1>
+                <p>View and download your payment records</p>
+            </div>
+        </section>
+
+        <!-- Payment History Section -->
+        <section class="payment-history">
+            <div class="container">
+                <!-- Filter and Search -->
+                <div class="filters">
+                    <div class="search-box">
+                        <input type="text" id="searchInput" placeholder="Search by transaction ID or description...">
+                        <button id="searchBtn">Search</button>
+                    </div>
+                    <div class="filter-options">
+                        <select id="statusFilter">
+                            <option value="all">All Status</option>
+                            <option value="paid">Paid</option>
+                            <option value="pending">Pending</option>
+                            <option value="overdue">Overdue</option>
+                        </select>
+                        <select id="dateFilter">
+                            <option value="all">All Time</option>
+                            <option value="month">This Month</option>
+                            <option value="quarter">Last 3 Months</option>
+                            <option value="year">This Year</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <!-- Payment History Table -->
+                <div class="table-container">
+                    <table id="historyTable">
+                        <thead>
+                            <tr>
+                                <th>Transaction ID</th>
+                                <th>Date</th>
+                                <th>Description</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>TXN123456</td>
+                                <td>15 Feb, 2025</td>
+                                <td>Tuition Fee - Spring Semester</td>
+                                <td>₹75,000</td>
+                                <td><span class="status paid">Paid</span></td>
+                                <td>
+                                    <button class="btn-sm download-receipt" data-id="TXN123456">Receipt</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>TXN123455</td>
+                                <td>10 Jan, 2025</td>
+                                <td>Hostel Fee - Spring Semester</td>
+                                <td>₹50,000</td>
+                                <td><span class="status paid">Paid</span></td>
+                                <td>
+                                    <button class="btn-sm download-receipt" data-id="TXN123455">Receipt</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>TXN123454</td>
+                                <td>05 Dec, 2024</td>
+                                <td>Library Fine</td>
+                                <td>₹500</td>
+                                <td><span class="status pending">Pending</span></td>
+                                <td>
+                                    <button class="btn-sm pay-now">Pay Now</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>TXN123453</td>
+                                <td>15 Sep, 2024</td>
+                                <td>Tuition Fee - Fall Semester</td>
+                                <td>₹75,000</td>
+                                <td><span class="status paid">Paid</span></td>
+                                <td>
+                                    <button class="btn-sm download-receipt" data-id="TXN123453">Receipt</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>TXN123452</td>
+                                <td>10 Aug, 2024</td>
+                                <td>Hostel Fee - Fall Semester</td>
+                                <td>₹50,000</td>
+                                <td><span class="status paid">Paid</span></td>
+                                <td>
+                                    <button class="btn-sm download-receipt" data-id="TXN123452">Receipt</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>TXN123451</td>
+                                <td>05 Aug, 2024</td>
+                                <td>Exam Fee</td>
+                                <td>₹2,000</td>
+                                <td><span class="status paid">Paid</span></td>
+                                <td>
+                                    <button class="btn-sm download-receipt" data-id="TXN123451">Receipt</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>TXN123450</td>
+                                <td>15 Jul, 2024</td>
+                                <td>Lab Fee</td>
+                                <td>₹5,000</td>
+                                <td><span class="status paid">Paid</span></td>
+                                <td>
+                                    <button class="btn-sm download-receipt" data-id="TXN123450">Receipt</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>TXN123449</td>
+                                <td>01 Jul, 2024</td>
+                                <td>Sports Fee</td>
+                                <td>₹3,000</td>
+                                <td><span class="status overdue">Overdue</span></td>
+                                <td>
+                                    <button class="btn-sm pay-now">Pay Now</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>TXN123448</td>
+                                <td>15 Jun, 2024</td>
+                                <td>Internet Fee</td>
+                                <td>₹1,500</td>
+                                <td><span class="status paid">Paid</span></td>
+                                <td>
+                                    <button class="btn-sm download-receipt" data-id="TXN123448">Receipt</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>TXN123447</td>
+                                <td>01 May, 2024</td>
+                                <td>Student Activities Fee</td>
+                                <td>₹2,500</td>
+                                <td><span class="status paid">Paid</span></td>
+                                <td>
+                                    <button class="btn-sm download-receipt" data-id="TXN123447">Receipt</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <!-- Pagination -->
+                <div class="pagination">
+                    <button class="pagination-btn" disabled>Previous</button>
+                    <button class="pagination-btn active">1</button>
+                    <button class="pagination-btn">2</button>
+                    <button class="pagination-btn">3</button>
+                    <button class="pagination-btn">Next</button>
+                </div>
+                
+                <!-- Export Options -->
+                <div class="export-options">
+                    <button class="btn btn-secondary" id="exportPdf">Export as PDF</button>
+                    <button class="btn btn-secondary" id="exportCsv">Export as CSV</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>GMU Fee Payment System</h3>
+                    <p>Manage all your fee payments easily through our online portal. Track payments, download receipts, and stay updated on due dates.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Dashboard</a></li>
+                        <li><a href="payment.html">Make Payment</a></li>
+                        <li><a href="history.html">Payment History</a></li>
+                        <li><a href="invoices.html">Invoices</a></li>
+                        <li><a href="support.html">Support</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li>Finance Department</li>
+                        <li>Phone: +91 9876543210</li>
+                        <li>Email: fees@gmu.ac.in</li>
+                        <li>Working Hours: Mon-Fri, 9am-5pm</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 GMU Fee Payment System. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="history.js"></script>
+</body>
+</html>

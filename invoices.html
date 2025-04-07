@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoices - GMU Fee Payment System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>GMU Fee Payment</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Dashboard</a></li>
+                    <li><a href="payment.html">Make Payment</a></li>
+                    <li><a href="history.html">Payment History</a></li>
+                    <li><a href="invoices.html" class="active">Invoices</a></li>
+                    <li><a href="support.html">Support</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Invoices</h1>
+                <p>View and download your invoices</p>
+            </div>
+        </section>
+
+        <!-- Invoices Section -->
+        <section class="invoices">
+            <div class="container">
+                <!-- Filter and Search -->
+                <div class="filters">
+                    <div class="search-box">
+                        <input type="text" id="searchInput" placeholder="Search by invoice ID or description...">
+                        <button id="searchBtn">Search</button>
+                    </div>
+                    <div class="filter-options">
+                        <select id="statusFilter">
+                            <option value="all">All Status</option>
+                            <option value="paid">Paid</option>
+                            <option value="pending">Pending</option>
+                            <option value="overdue">Overdue</option>
+                        </select>
+                        <select id="semesterFilter">
+                            <option value="all">All Semesters</option>
+                            <option value="spring2025">Spring 2025</option>
+                            <option value="fall2024">Fall 2024</option>
+                            <option value="spring2024">Spring 2024</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <!-- Invoices Cards -->
+                <div class="invoices-container">
+                    <div class="invoice-card" data-status="pending" data-semester="spring2025">
+                        <div class="invoice-header">
+                            <div class="invoice-id">INV20250401</div>
+                            <div class="invoice-status pending">Pending</div>
+                        </div>
+                        <div class="invoice-body">
+                            <h3>Tuition Fee - Spring Semester</h3>
+                            <div class="invoice-details">
+                                <div class="detail-item">
+                                    <span class="label">Issue Date:</span>
+                                    <span class="value">01 Apr, 2025</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Due Date:</span>
+                                    <span class="value">30 Apr, 2025</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Amount:</span>
+                                    <span class="value amount">₹45,000</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="invoice-footer">
+                            <button class="btn-sm download-invoice" data-id="INV20250401">Download</button>
+                            <button class="btn-sm pay-now">Pay Now</button>
+                        </div>
+                    </div>
+                    
+                    <div class="invoice-card" data-status="paid" data-semester="spring2025">
+                        <div class="invoice-header">
+                            <div class="invoice-id">INV20250215</div>
+                            <div class="invoice-status paid">Paid</div>
+                        </div>
+                        <div class="invoice-body">
+                            <h3>Hostel Fee - Spring Semester</h3>
+                            <div class="invoice-details">
+                                <div class="detail-item">
+                                    <span class="label">Issue Date:</span>
+                                    <span class="value">01 Feb, 2025</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Due Date:</span>
+                                    <span class="value">15 Feb, 2025</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Amount:</span>
+                                    <span class="value amount">₹50,000</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Payment Date:</span>
+                                    <span class="value">10 Feb, 2025</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="invoice-footer">
+                            <button class="btn-sm download-invoice" data-id="INV20250215">Download</button>
+                            <button class="btn-sm download-receipt" data-id="TXN123455">Receipt</button>
+                        </div>
+                    </div>
+                    
+                    <div class="invoice-card" data-status="pending" data-semester="spring2025">
+                        <div class="invoice-header">
+                            <div class="invoice-id">INV20250110</div>
+                            <div class="invoice-status pending">Pending</div>
+                        </div>
+                        <div class="invoice-body">
+                            <h3>Library Fine</h3>
+                            <div class="invoice-details">
+                                <div class="detail-item">
+                                    <span class="label">Issue Date:</span>
+                                    <span class="value">05 Dec, 2024</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Due Date:</span>
+                                    <span class="value">20 Dec, 2024</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Amount:</span>
+                                    <span class="value amount">₹500</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="invoice-footer">
+                            <button class="btn-sm download-invoice" data-id="INV20250110">Download</button>
+                            <button class="btn-sm pay-now">Pay Now</button>
+                        </div>
+                    </div>
+                    
+                    <div class="invoice-card" data-status="paid" data-semester="fall2024">
+                        <div class="invoice-header">
+                            <div class="invoice-id">INV20240915</div>
+                            <div class="invoice-status paid">Paid</div>
+                        </div>
+                        <div class="invoice-body">
+                            <h3>Tuition Fee - Fall Semester</h3>
+                            <div class="invoice-details">
+                                <div class="detail-item">
+                                    <span class="label">Issue Date:</span>
+                                    <span class="value">01 Sep, 2024</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Due Date:</span>
+                                    <span class="value">15 Sep, 2024</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Amount:</span>
+                                    <span class="value amount">₹75,000</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Payment Date:</span>
+                                    <span class="value">15 Sep, 2024</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="invoice-footer">
+                            <button class="btn-sm download-invoice" data-id="INV20240915">Download</button>
+                            <button class="btn-sm download-receipt" data-id="TXN123453">Receipt</button>
+                        </div>
+                    </div>
+                    
+                    <div class="invoice-card" data-status="paid" data-semester="fall2024">
+                        <div class="invoice-header">
+                            <div class="invoice-id">INV20240810</div>
+                            <div class="invoice-status paid">Paid</div>
+                        </div>
+                        <div class="invoice-body">
+                            <h3>Hostel Fee - Fall Semester</h3>
+                            <div class="invoice-details">
+                                <div class="detail-item">
+                                    <span class="label">Issue Date:</span>
+                                    <span class="value">01 Aug, 2024</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Due Date:</span>
+                                    <span class="value">15 Aug, 2024</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Amount:</span>
+                                    <span class="value amount">₹50,000</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Payment Date:</span>
+                                    <span class="value">10 Aug, 2024</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="invoice-footer">
+                            <button class="btn-sm download-invoice" data-id="INV20240810">Download</button>
+                            <button class="btn-sm download-receipt" data-id="TXN123452">Receipt</button>
+                        </div>
+                    </div>
+                    
+                    <div class="invoice-card" data-status="overdue" data-semester="fall2024">
+                        <div class="invoice-header">
+                            <div class="invoice-id">INV20240701</div>
+                            <div class="invoice-status overdue">Overdue</div>
+                        </div>
+                        <div class="invoice-body">
+                            <h3>Sports Fee</h3>
+                            <div class="invoice-details">
+                                <div class="detail-item">
+                                    <span class="label">Issue Date:</span>
+                                    <span class="value">01 Jul, 2024</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Due Date:</span>
+                                    <span class="value">15 Jul, 2024</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Amount:</span>
+                                    <span class="value amount">₹3,000</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Late Fee:</span>
+                                    <span class="value">₹300</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="invoice-footer">
+                            <button class="btn-sm download-invoice" data-id="INV20240701">Download</button>
+                            <button class="btn-sm pay-now">Pay Now</button>
+                        </div>
+                    </div>
+                    
+                    <div class="invoice-card" data-status="paid" data-semester="spring2024">
+                        <div class="invoice-header">
+                            <div class="invoice-id">INV20240615</div>
+                            <div class="invoice-status paid">Paid</div>
+                        </div>
+                        <div class="invoice-body">
+                            <h3>Internet Fee</h3>
+                            <div class="invoice-details">
+                                <div class="detail-item">
+                                    <span class="label">Issue Date:</span>
+                                    <span class="value">01 Jun, 2024</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Due Date:</span>
+                                    <span class="value">15 Jun, 2024</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Amount:</span>
+                                    <span class="value amount">₹1,500</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Payment Date:</span>
+                                    <span class="value">15 Jun, 2024</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="invoice-footer">
+                            <button class="btn-sm download-invoice" data-id="INV20240615">Download</button>
+                            <button class="btn-sm download-receipt" data-id="TXN123448">Receipt</button>
+                        </div>
+                    </div>
+                    
+                    <div class="invoice-card" data-status="paid" data-semester="spring2024">
+                        <div class="invoice-header">
+                            <div class="invoice-id">INV20240501</div>
+                            <div class="invoice-status paid">Paid</div>
+                        </div>
+                        <div class="invoice-body">
+                            <h3>Student Activities Fee</h3>
+                            <div class="invoice-details">
+                                <div class="detail-item">
+                                    <span class="label">Issue Date:</span>
+                                    <span class="value">01 May, 2024</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Due Date:</span>
+                                    <span class="value">15 May, 2024</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Amount:</span>
+                                    <span class="value amount">₹2,500</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Payment Date:</span>
+                                    <span class="value">01 May, 2024</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="invoice-footer">
+                            <button class="btn-sm download-invoice" data-id="INV20240501">Download</button>
+                            <button class="btn-sm download-receipt" data-id="TXN123447">Receipt</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- No Results Message (hidden by default) -->
+                <div id="noResults" class="no-results" style="display: none;">
+                    <p>No matching invoices found.</p>
+                </div>
+                
+                <!-- Show More Button -->
+                <div class="show-more-container">
+                    <button id="showMoreBtn" class="btn btn-secondary">Show More</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>GMU Fee Payment System</h3>
+                    <p>Manage all your fee payments easily through our online portal. Track payments, download receipts, and stay updated on due dates.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Dashboard</a></li>
+                        <li><a href="payment.html">Make Payment</a></li>
+                        <li><a href="history.html">Payment History</a></li>
+                        <li><a href="invoices.html">Invoices</a></li>
+                        <li><a href="support.html">Support</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li>Finance Department</li>
+                        <li>Phone: +91 9876543210</li>
+                        <li>Email: fees@gmu.ac.in</li>
+                        <li>Working Hours: Mon-Fri, 9am-5pm</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 GMU Fee Payment System. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="invoices.js"></script>
+</body>
+</html>
